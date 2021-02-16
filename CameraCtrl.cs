@@ -90,20 +90,4 @@ public class CameraCtrl : MonoBehaviour
             Cam.transform.localRotation = Quaternion.Slerp(NormalPos.localRotation, HighPos.localRotation, LAmt);
         }
     }
-
-    /*
-    public void FovHandle(float D, float Vel)
-    {
-        //get appropritate fov 
-        float LerpAmt = (Vel - FovMinSpeed) / FOVSpeed;
-        float FieldView = Mathf.Lerp(MinFov, MaxFov, LerpAmt);
-        //ease into this fov
-        Cam.fieldOfView = Mathf.Lerp(Cam.fieldOfView, FieldView, 4 * D);
-
-        //handle blue 
-        float SecondLerp = (Vel - (FovMinSpeed * 1.2f)) / (FOVSpeed * 1.2f);
-        float BlurAmt = Mathf.Lerp(0, -0.5f, SecondLerp);
-        BlurFx.Distortion = Mathf.Lerp(BlurFx.Distortion, BlurAmt, 7 * D);
-    }
-    */
 }
